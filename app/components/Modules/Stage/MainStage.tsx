@@ -2,15 +2,13 @@ import { FC, use } from "react";
 import { GET } from "@/utils/Fetch";
 import { formatDate } from "@/utils/FormatDate";
 import { formatTime } from "@/utils/FormatTime";
-import { Game } from "@/types/game";
 import GameCard from "../../custom/GameCard/GameCard";
-import { GoArrowDown } from "react-icons/go";
 import styles from "./MainStage.module.scss";
 
 const MainStage = () => {
   const currentDate: any = formatDate(new Date());
   const data = use(
-    GET(`https://api-nba-v1.p.rapidapi.com/games?date=2024-02-24&season=2023`)
+      GET(`https://api-nba-v1.p.rapidapi.com/games?date=${currentDate}&season=2023`)
   );
 
   return (
