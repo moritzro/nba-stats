@@ -1,17 +1,30 @@
 .gameCard {
   width: fit-content;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #f0f0f5;
   position: relative;
-  padding: 50px;
+  padding: 24px;
+
+  @include xs {
+    padding: 32px;
+  }
+
+  @include s {
+    padding: 48px;
+  }
 
   .statusWrapper {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 8px;
+    left: 8px;
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @include s {
+      top: 16px;
+      left: 16px;
+    }
 
     .gameStatusBubble {
       height: 10px;
@@ -21,6 +34,11 @@
 
     .gameStatus {
       text-transform: capitalize;
+      font-size: 0.75rem;
+
+      @include xs {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -28,25 +46,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    font-size: 24px;
+    gap: 16px;
+    font-size: 1rem;
     font-weight: bold;
+
+    @include xs {
+      gap: 24px;
+      font-size: 1.5rem;
+    }
 
     .gameStats {
       text-align: center;
 
       .gameTime,
       .date {
-        padding-top: 5px;
-        font-size: 18px;
+        padding-top: 8px;
+        font-size: 0.75rem;
         font-weight: 400;
+        
+        @include xs {
+          font-size: 1rem;
+        }
       }
     }
   }
 
   img {
-    width: 64px;
+    width: 48px;
     height: auto;
+
+    @include xs {
+      width: 64px;
+    }
   }
 }
 
