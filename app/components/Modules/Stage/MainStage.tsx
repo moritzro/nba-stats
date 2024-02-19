@@ -3,6 +3,7 @@ import { GET } from "@/utils/Fetch";
 import { formatDate } from "@/utils/FormatDate";
 import { formatTime } from "@/utils/FormatTime";
 import GameCard from "../../custom/GameCard/GameCard";
+import ConferenceStandings from "../ConferenceStandings/ConferenceStandings";
 import styles from "./MainStage.module.scss";
 
 const MainStage = () => {
@@ -37,7 +38,9 @@ const MainStage = () => {
               />
             ))
           ) : (
-            <h2>No games today!</h2>
+            <>
+              <h2>No games today!</h2>
+            </>
           )}
         </div>
       </div>
