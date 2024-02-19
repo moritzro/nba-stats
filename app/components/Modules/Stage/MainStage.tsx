@@ -37,7 +37,9 @@ const MainStage = () => {
               />
             ))
           ) : (
-            <h2>No games today!</h2>
+            <>
+              <h2>No games today!</h2>
+            </>
           )}
         </div>
       </div>
