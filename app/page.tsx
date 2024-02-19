@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <MainStage />
-      <section className={styles.section}>
+      <section className={styles.sectionConferenceStandings}>
         <ConferenceStandings headline="Eastern Conference" conference="east" />
         <ConferenceStandings headline="Western Conference" conference="west" />
       </section>
