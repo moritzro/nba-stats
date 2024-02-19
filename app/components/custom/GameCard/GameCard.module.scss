@@ -3,10 +3,10 @@
   border-radius: 8px;
   background-color: #f0f0f5;
   position: relative;
-  padding: 12px 24px;
+  padding: 16px 24px;
 
   @include xs {
-    padding: 32px;
+    padding: 24px;
   }
 
   @include s {
