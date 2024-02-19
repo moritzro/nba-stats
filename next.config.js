@@ -1,7 +1,8 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   sassOptions: {
-    additionalData: '@import "./styles/_mixins.scss";',
+    additionalData: '@import "./styles/mixins.scss" ;',
   },
 };
 
-module.export = nextConfig;
+module.exports = nextConfig;

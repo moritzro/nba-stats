@@ -1,50 +1,52 @@
 .gameCard {
-    width: fit-content;
-    border-radius: 6px;
-    background-color: #f0f0f5;
-    position: relative;
-    padding: 50px;
+  width: fit-content;
+  border-radius: 6px;
+  background-color: #f0f0f5;
+  position: relative;
+  padding: 50px;
 
-    .statusWrapper {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+  .statusWrapper {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-        .gameStatusBubble {
-            height: 10px;
-            width: 10px;
-            border-radius: 50%;
-        }
-
-        .gameStatus {
-            text-transform: capitalize;
-        }
+    .gameStatusBubble {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
     }
 
-    .gameInfo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-        font-size: 24px;
-        font-weight: bold;
-
-        .gameStats {
-            text-align: center;
-
-            .gameTime, .date {
-                padding-top: 5px;
-                font-size: 18px;
-                font-weight: 400;
-            }
-        }
+    .gameStatus {
+      text-transform: capitalize;
     }
+  }
 
-    img {
-        width: 64px;
-        height: auto;
+  .gameInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: bold;
+
+    .gameStats {
+      text-align: center;
+
+      .gameTime,
+      .date {
+        padding-top: 5px;
+        font-size: 18px;
+        font-weight: 400;
+      }
     }
+  }
+
+  img {
+    width: 64px;
+    height: auto;
+  }
 }
+
