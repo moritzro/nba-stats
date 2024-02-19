@@ -1,10 +1,11 @@
 import Image from "next/image";
+import MainStage from "./components/Modules/Stage/MainStage";
 import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <div>
-      <h1>NBA Stats</h1>
+      <MainStage />
     </div>
   );
 }
