@@ -15,6 +15,15 @@ a {
   text-decoration: none;
 }
 
+section {
+  min-height: 100vh;
+  padding-inline: 24px;
+
+  @include s {
+    padding-inline: 48px;
+  }
+}
+
 tbody tr {
   height: 80px;
 }
@@ -23,4 +32,3 @@ tr:nth-child(even) {
   background-color: #f0f0f5;
   border-spacing: 0;
 }
-

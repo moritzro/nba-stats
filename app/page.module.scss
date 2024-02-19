@@ -1,0 +1,12 @@
+.sectionConferenceStandings {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+
+  @include m {
+    justify-content: center;
+    flex-direction: row;
+    gap: 96px;
+  }
+}

@@ -1,6 +1,11 @@
 .headline {
-  font-size: 2rem;
-  margin-block-end: 32px;
+  font-size: 1.8rem;
+  margin-block-end: 28px;
+
+  @include m {
+    font-size: 2rem;
+    margin-block-end: 36px;
+  }
 }
 
 .rankColumn {
@@ -17,7 +22,11 @@
 
 .logo {
   height: auto;
-  width: 48px;
+  width: 32px;
+
+  @include s {
+    width: 48px;
+  }
 }
 
 .name {

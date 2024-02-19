@@ -21,7 +21,7 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
 
   return (
     <div>
-      <h1 className={styles.headline}>{headline} </h1>
+      <h2 className={styles.headline}>{headline} </h2>
       <table cellSpacing="0" cellPadding="0">
         <thead>
           <tr>
