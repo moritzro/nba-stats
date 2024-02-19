@@ -3,7 +3,7 @@
   border-radius: 8px;
   background-color: #f0f0f5;
   position: relative;
-  padding: 24px;
+  padding: 12px 24px;
 
   @include xs {
     padding: 32px;
@@ -49,6 +49,7 @@
     gap: 16px;
     font-size: 1rem;
     font-weight: bold;
+    height: 100px;
 
     @include xs {
       gap: 24px;
@@ -63,7 +64,7 @@
         padding-top: 8px;
         font-size: 0.75rem;
         font-weight: 400;
-        
+
         @include xs {
           font-size: 1rem;
         }
@@ -80,4 +81,3 @@
     }
   }
 }
-
