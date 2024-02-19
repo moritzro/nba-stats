@@ -43,6 +43,11 @@
   align-items: center;
   gap: 16px;
   height: inherit;
+  width: 200px;
+
+  @include s {
+    width: 300px;
+  }
 }
 
 .flexWrapper {
