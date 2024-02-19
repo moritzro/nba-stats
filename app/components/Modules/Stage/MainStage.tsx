@@ -8,14 +8,16 @@ import styles from "./MainStage.module.scss";
 const MainStage = () => {
   const currentDate: any = formatDate(new Date());
   const data = use(
-      GET(`https://api-nba-v1.p.rapidapi.com/games?date=${currentDate}&season=2023`)
+    GET(
+      `https://api-nba-v1.p.rapidapi.com/games?date=${currentDate}&season=2023`
+    )
   );
 
   return (
     <section className={styles.mainStage}>
-        <div>
-            <h1 className={styles.headline}>Welcome to NBA Stats</h1>
-        </div>
+      <div>
+        <h1 className={styles.headline}>Welcome to NBA Stats</h1>
+      </div>
       <div>
         <h2 className={styles.matchesHeadline}>Todays Games:</h2>
         <div className={styles.matchesWrapper}>
