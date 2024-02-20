@@ -1,23 +1,26 @@
 import { FC } from "react";
 import Link from "next/link";
 import styles from "./Navigation.module.scss";
-import { link } from "fs";
 
-interface NavigationProps {
-  navLinkName: Array<string>;
-  navLink: Array<string>;
+interface linkObject {
+  label: string;
+  link: any;
 }
 
-const Navigation: FC<NavigationProps> = ({ navLinkName, navLink }) => {
+interface NavigationProps {
+  links: linkObject[];
+}
+
+const Navigation: FC<NavigationProps> = ({ links }) => {
   return (
     <div className={styles.navWrapper}>
       <div className={styles.navLogo}>NBA Stats</div>
       <nav>
         <ul>
-          {navLink.length > 0 &&
-            navLink.map((link, index) => (
-              <li>
-                <Link href={link}>{navLinkName[index]}</Link>
+          {links.length > 0 &&
+            links.map((link: linkObject, index: number) => (
+              <li key={index}>
+                <Link href={link.link}>{link.label}</Link>
               </li>
             ))}
         </ul>
