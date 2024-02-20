@@ -1,5 +1,5 @@
-import MainStage from "./components/Modules/Stage/MainStage";
-import ConferenceStandings from "./Components/Modules/ConferenceStandings/ConferenceStandings";
+import MainStage from "./components/modules/Stage/MainStage";
+import ConferenceStandings from "./components/modules/ConferenceStandings/ConferenceStandings";
 import styles from "./page.module.scss";
 
 export default function Home() {
