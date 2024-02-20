@@ -19,7 +19,7 @@ const Navigation: FC<NavigationProps> = ({ navLinkName, navLink }) => {
               <li>
                 <Link href={link}>{navLinkName[index]}</Link>
               </li>
-          ))}
+            ))}
         </ul>
       </nav>
     </div>
