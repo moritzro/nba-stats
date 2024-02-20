@@ -1,0 +1,33 @@
+.navWrapper {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background-color: #e1e1e14d;
+  z-index: 1;
+
+  @include s {
+    padding: 24px 48px;
+  }
+
+  .navLogo {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      gap: 24px;
+
+      li {
+        font-weight: 500;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
