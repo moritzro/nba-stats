@@ -13,15 +13,18 @@ export const metadata: Metadata = {
 const navObjects = [
   {
     link: "/players",
-    label: "players",
+    label: "Players",
+    icon: "/img",
   },
   {
-    link: "/players",
-    label: "players",
+    link: "/teams",
+    label: "Teams",
+    icon: "/img",
   },
   {
-    link: "/players",
-    label: "players",
+    link: "/news",
+    label: "News",
+    icon: "/img",
   },
 ];
 
