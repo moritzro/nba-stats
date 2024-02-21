@@ -1,17 +1,14 @@
-import { FC, use } from "react";
-import { GET } from "@/utils/Fetch";
+import { use } from "react";
+import { getNbaGames } from "@/utils/FetchNextGames";
 import { formatDate } from "@/utils/FormatDate";
 import { formatTime } from "@/utils/FormatTime";
+import { getFormattedDate } from "@/utils/GetDate";
 import GameCard from "../../custom/GameCard/GameCard";
 import styles from "./MainStage.module.scss";
 
 const MainStage = () => {
   const currentDate: any = formatDate(new Date());
-  const data = use(
-    GET(
-      `https://api-nba-v1.p.rapidapi.com/games?date=${currentDate}&season=2023`
-    )
-  );
+  const data = use(getNbaGames(currentDate, "2023"));
 
   return (
     <section className={styles.mainStage}>
@@ -35,7 +32,7 @@ const MainStage = () => {
                 gamePeriod={game.periods.current}
                 gameStatus={game.status.long}
                 gameTime={formatTime(game.date.start)}
-                gameDate={currentDate}
+                gameDate={getFormattedDate(game.date.start)}
               />
             ))
           ) : (
