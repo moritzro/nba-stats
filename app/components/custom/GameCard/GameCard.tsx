@@ -14,6 +14,7 @@ interface GameCardProps {
   gameTime: string;
   gamePeriod: number;
   gameDate: string;
+  gameId: number;
 }
 
 const GameCard: FC<GameCardProps> = ({
@@ -28,9 +29,10 @@ const GameCard: FC<GameCardProps> = ({
   gameTime,
   gamePeriod,
   gameDate,
+  gameId,
 }) => {
   return (
-    <Link href="#">
+    <Link href={`/matchup/${gameId}`}>
       <div className={styles.gameCard}>
         <div className={styles.statusWrapper}>
           <div
