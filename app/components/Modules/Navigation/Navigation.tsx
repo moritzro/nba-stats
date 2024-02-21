@@ -5,6 +5,7 @@ import styles from "./Navigation.module.scss";
 interface linkObject {
   label: string;
   link: any;
+  icon: string;
 }
 
 interface NavigationProps {
@@ -20,7 +21,9 @@ const Navigation: FC<NavigationProps> = ({ links }) => {
           {links.length > 0 &&
             links.map((link: linkObject, index: number) => (
               <li key={index}>
-                <Link href={link.link}>{link.label}</Link>
+                <Link href={link.link}>
+                  {link.label} <img src={link.icon} />
+                </Link>
               </li>
             ))}
         </ul>
