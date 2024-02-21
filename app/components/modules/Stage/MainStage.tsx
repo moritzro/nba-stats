@@ -33,6 +33,7 @@ const MainStage = () => {
                 gameStatus={game.status.long}
                 gameTime={formatTime(game.date.start)}
                 gameDate={getFormattedDate(game.date.start)}
+                gameId={game.id}
               />
             ))
           ) : (
