@@ -10,7 +10,6 @@ const RecentNews = () => {
       "https://tank01-fantasy-stats.p.rapidapi.com/getNBANews?recentNews=true&maxItems=30"
     )
   );
-  console.log(data);
   return (
     <section className={styles.recentNews}>
       <h2 className={styles.headline}>Recent player news</h2>
