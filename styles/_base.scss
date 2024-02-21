@@ -18,9 +18,14 @@ section {
   max-width: 1440px;
   min-height: 100vh;
   padding-inline: 24px;
+  margin-bottom: 32px;
 
   @include s {
     padding-inline: 48px;
+  }
+
+  @include m {
+    margin-bottom: 64px;
   }
 }
 
