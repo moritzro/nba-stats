@@ -8,7 +8,7 @@
   background-color: #e1e1e1;
   z-index: 1;
   bottom: 0;
-  
+
   @include s {
     background-color: #e1e1e14d;
     padding: 24px 48px;
@@ -16,36 +16,36 @@
     bottom: unset;
     justify-content: space-between;
   }
+}
 
-  .navLogo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: none;
+.navLogo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: none;
 
-    @include s {
-      display: block;
-    }
+  @include s {
+    display: block;
   }
+}
 
-  nav {
-    ul {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      list-style-type: none;
-      gap: 24px;
+.navMain {
+  ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 24px;
 
-      li {
-        font-weight: 500;
-        font-size: 1.25rem;
+    li {
+      font-weight: 500;
+      font-size: 1.25rem;
 
-        img {
-          width: 16px;
-          height: 16px;
+      img {
+        width: 16px;
+        height: 16px;
 
-          @include s {
-            display: none;
-          }
+        @include s {
+          display: none;
         }
       }
     }
