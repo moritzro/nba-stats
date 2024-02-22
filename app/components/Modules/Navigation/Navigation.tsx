@@ -4,7 +4,7 @@ import styles from "./Navigation.module.scss";
 
 interface linkObject {
   label: string;
-  link: any;
+  link: string;
   icon: string;
 }
 
@@ -16,7 +16,7 @@ const Navigation: FC<NavigationProps> = ({ links }) => {
   return (
     <div className={styles.navWrapper}>
       <div className={styles.navLogo}>NBA Stats</div>
-      <nav>
+      <nav className={styles.navMain}>
         <ul>
           {links.length > 0 &&
             links.map((link: linkObject, index: number) => (
