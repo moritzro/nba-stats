@@ -1,9 +1,12 @@
-const Matchup = () => {
+import StageMatchDetails from "@/app/components/modules/StageMatchDetails/StageMatchDetails";
+
+const Matchup = ({ params: { matchup } }) => {
   return (
     <div>
-      <h1>Hello world</h1>
+      <StageMatchDetails id={matchup} />
     </div>
-  )
-}
+  );
+};
 
-export default Matchup
+export default Matchup;
+
