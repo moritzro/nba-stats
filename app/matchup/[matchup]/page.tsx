@@ -1,7 +1,9 @@
-const Matchup = () => {
+import GameStats from "@/app/components/modules/GameStats/GameStats";
+
+const Matchup = ({params: { matchup }}) => {
   return (
     <div>
-      <h1>Hello world</h1>
+      <GameStats id={10403} />
     </div>
   )
 }
