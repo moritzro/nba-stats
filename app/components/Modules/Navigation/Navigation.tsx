@@ -17,12 +17,12 @@ const Navigation: FC<NavigationProps> = ({ links }) => {
     <div className={styles.navWrapper}>
       <div className={styles.navLogo}>NBA Stats</div>
       <nav className={styles.navMain}>
-        <ul>
+        <ul className={styles.navList}>
           {links.length > 0 &&
             links.map((link: linkObject, index: number) => (
-              <li key={index}>
+              <li className={styles.navListItem} key={index}>
                 <Link href={link.link}>
-                  {link.label} <img src={link.icon} />
+                  {link.label} <img className={styles.navIcon} src={link.icon} />
                 </Link>
               </li>
             ))}
