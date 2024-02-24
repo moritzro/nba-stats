@@ -16,6 +16,7 @@ const GameStats:FC<GameStatsProps> = ({ id }) => {
         <thead>
           <tr>
             <th className={styles.statsTH}>Team</th>
+            <th className={styles.statsTH}>Points</th>
             <th className={styles.statsTH}>Rebounds</th>
             <th className={styles.statsTH}>Assists</th>
             <th className={styles.statsTH}>Blocks</th>
