@@ -1,0 +1,73 @@
+.stage {
+  display: flex;
+  justify-content: center;
+  background-color: #d6d2d2;
+  padding: 32px;
+  flex-direction: column;
+
+  @include m {
+    padding: 64px;
+  }
+
+  .matchup {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 3px solid black;
+    padding-block-end: 24px;
+    justify-content: center;
+
+    @include s {
+      gap: 64px;
+    }
+
+    @include m {
+      gap: 96px;
+    }
+  }
+
+  .score {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .logo {
+    height: 80px;
+    width: auto;
+
+    @include s {
+      height: 150px;
+    }
+
+    @include m {
+      height: 200px;
+    }
+  }
+
+  .matchInfo {
+    margin-top: 24px;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .match {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .score {
+    width: max-content;
+    font-size: 1.5rem;
+
+    @include s {
+      font-size: calc(100vw / 26);
+    }
+  }
+}
