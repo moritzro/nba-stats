@@ -12,17 +12,15 @@ const GameStats:FC<GameStatsProps> = ({ id }) => {
 
   return (
     <section>
-      <h1>GameStats</h1>
-      <table>
+      <table className={styles.statsTable}>
         <thead>
           <tr>
-            <th>Team</th>
-            <th>Points</th>
-            <th>Rebounds</th>
-            <th>Assists</th>
-            <th>Blocks</th>
-            <th>Turnovers</th>
-            <th>FG%</th>
+            <th className={styles.statsTH}>Team</th>
+            <th className={styles.statsTH}>Rebounds</th>
+            <th className={styles.statsTH}>Assists</th>
+            <th className={styles.statsTH}>Blocks</th>
+            <th className={styles.statsTH}>Turnovers</th>
+            <th className={styles.statsTH}>FG%</th>
           </tr>
         </thead>
         <tbody>
