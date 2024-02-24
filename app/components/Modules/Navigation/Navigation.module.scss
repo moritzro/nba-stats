@@ -28,26 +28,24 @@
   }
 }
 
-.navMain {
-  ul {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    list-style-type: none;
-    gap: 24px;
+.navList {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 24px;
 
-    li {
-      font-weight: 500;
-      font-size: 1.25rem;
+  .navListItem {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+}
 
-      img {
-        width: 16px;
-        height: 16px;
+.navIcon {
+  width: 16px;
+  height: 16px;
 
-        @include s {
-          display: none;
-        }
-      }
-    }
+  @include s {
+    display: none;
   }
 }
