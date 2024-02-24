@@ -1,11 +1,11 @@
-import GameStats from "@/app/components/modules/GameStats/GameStats";
+import StageMatchDetails from "@/app/components/modules/StageMatchDetails/StageMatchDetails";
 
-const Matchup = ({params: { matchup }}) => {
+const Matchup = ({ params: { matchup } }) => {
   return (
     <div>
-      <GameStats id={10403} />
+      <StageMatchDetails id={matchup} />
     </div>
-  )
-}
+  );
+};
 
-export default Matchup
+export default Matchup;

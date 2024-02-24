@@ -73,7 +73,7 @@ const GameCard: FC<GameCardProps> = ({
             {gameStatus === "Finished" && (
               <>
                 <p>
-                  {awayTeamScore} @ {homeTeamScore}
+                  {awayTeamScore} : {homeTeamScore}
                 </p>
               </>
             )}
