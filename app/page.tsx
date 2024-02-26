@@ -1,6 +1,6 @@
-import MainStage from "./components/modules/Stage/MainStage";
-import ConferenceStandings from "./components/modules/ConferenceStandings/ConferenceStandings";
-import RecentNews from "./components/modules/RecentNews/RecentNews";
+import MainStage from "@/components/modules/Stage/MainStage";
+import ConferenceStandings from "@/components/modules/ConferenceStandings/ConferenceStandings";
+import RecentNews from "@/components/modules/RecentNews/RecentNews";
 import styles from "./page.module.scss";
 
 export default function Home() {

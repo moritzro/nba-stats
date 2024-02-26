@@ -3,7 +3,7 @@ import { getNbaGames } from "@/utils/FetchNextGames";
 import { formatDate } from "@/utils/FormatDate";
 import { formatTime } from "@/utils/FormatTime";
 import { getFormattedDate } from "@/utils/GetDate";
-import GameCard from "../../custom/GameCard/GameCard";
+import GameCard from "@/components/custom/GameCard/GameCard";
 import styles from "./MainStage.module.scss";
 
 const MainStage = () => {

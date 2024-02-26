@@ -1,7 +1,7 @@
 import { use } from "react";
 import { GETNews } from "@/utils/FetchNews";
 import { news } from "@/types/news";
-import NewsCard from "../../custom/NewsCard/NewsCard";
+import NewsCard from "@/components/custom/NewsCard/NewsCard";
 import styles from "./RecentNews.module.scss";
 
 const RecentNews = () => {
