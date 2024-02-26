@@ -6,6 +6,10 @@
 
 body {
   overflow-x: hidden;
+
+  @include s {
+    padding-top: 96px;
+  }
 }
 
 a {
