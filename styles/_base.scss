@@ -2,14 +2,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
   overflow-x: hidden;
-
-  @include s {
-    padding-top: 96px;
-  }
 }
 
 a {
