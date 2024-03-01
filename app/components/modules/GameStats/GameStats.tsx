@@ -11,19 +11,19 @@ const GameStats: FC<GameStatsProps> = ({ id }) => {
   const data = use(getGameStats(id));
 
   return (
-    <div className={styles.gameStatsWrapper}>
+    <div className={styles.gameStats}>
       <div className={styles.statCategories}>
-        <span>Points</span>
-        <span>Rebounds</span>
-        <span>Assists</span>
-        <span>Blocks</span>
-        <span>Turnovers</span>
-        <span>FG%</span>
+        <div>Points</div>
+        <div>Rebounds</div>
+        <div>Assists</div>
+        <div>Blocks</div>
+        <div>Turnovers</div>
+        <div>FG%</div>
       </div>
       {data.response.map((team: any, index: number) => {
         return (
           <div className={styles.statsWrapper} key={index}>
-            <img key={index} className={styles.teamLogo} src={team.team.logo} />
+            <img key={index} className={styles.teamLogo} src={team.team.logo} alt={team.team.name}/>
             {team.statistics.map((stats: any, index: number) => (
               <TeamStatsTable
                 key={index}
