@@ -1,0 +1,29 @@
+.matchesWrapper {
+  display: flex;
+  gap: 48px;
+  background-color: lighten($color: #000000, $amount: 90);
+  width: 100vw;
+  padding-inline: 48px;
+  padding-block: 24px;
+  margin-bottom: 48px;
+  overflow-x: scroll;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-inline-size: 200px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.image {
+  width: 48px;
+  height: auto;
+}
