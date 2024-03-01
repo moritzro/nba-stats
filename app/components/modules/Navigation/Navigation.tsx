@@ -15,16 +15,14 @@ interface NavigationProps {
 const Navigation: FC<NavigationProps> = ({ links }) => {
   return (
     <div className={styles.navWrapper}>
-      <div className={styles.navLogo}>
-        <Link href="../">NBA Stats</Link>
-      </div>
+      <Link className={styles.navLogo} href="../">NBA Stats</Link>
       <nav className={styles.navMain}>
         <ul className={styles.navList}>
           {links.length > 0 &&
             links.map((link: linkObject, index: number) => (
               <li className={styles.navListItem} key={index}>
                 <Link href={link.link}>
-                  {link.label}{" "}
+                  {link.label}
                   <img className={styles.navIcon} src={link.icon} />
                 </Link>
               </li>
