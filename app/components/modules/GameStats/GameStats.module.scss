@@ -1,11 +1,38 @@
-.statsTable {
-  margin: 40px auto;
+.gameStatsWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 50px;
+  margin: 100px auto;
 }
 
-.statsTH {
-  padding-right: 20px;
+.teamLogo {
+  width: 96px;
+  height: auto;
+  margin-bottom: 24px;
 }
 
-.tableWrapper {
-  overflow-x: auto;
+.statsWrapper,
+.statCategories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  font-size: 1.375rem;
+}
+
+.statsWrapper {
+  &:first-child {
+    order: 0;
+  }
+  &:last-child {
+    order: 2;
+  }
+}
+
+.statCategories {
+  order: 1;
+  text-transform: uppercase;
+  font-weight: 700;
 }
