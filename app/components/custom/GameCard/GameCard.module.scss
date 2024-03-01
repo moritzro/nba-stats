@@ -4,6 +4,7 @@
   background-color: #f0f0f5;
   position: relative;
   padding: 16px 24px;
+  min-width: 100%;
 
   @include xs {
     padding: 24px;

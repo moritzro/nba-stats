@@ -9,7 +9,7 @@ type StageMatchDetailsProps = {
 };
 
 const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
-  const data = use(getGame(8899));
+  const data = use(getGame(id));
   const match = data.response[0];
   return (
     <div className={styles.stage}>
