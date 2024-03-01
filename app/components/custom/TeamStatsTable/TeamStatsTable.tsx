@@ -20,12 +20,12 @@ const TeamStatsTable: FC<TeamStatsProps> = ({
 }) => {
   return (
     <>
-      <span>{points}</span>
-      <span>{rebounds}</span>
-      <span>{assists}</span>
-      <span>{blocks}</span>
-      <span>{turnovers}</span>
-      <span>{fgp}</span>
+      <div>{points}</div>
+      <div>{rebounds}</div>
+      <div>{assists}</div>
+      <div>{blocks}</div>
+      <div>{turnovers}</div>
+      <div>{fgp}</div>
     </>
   );
 };
