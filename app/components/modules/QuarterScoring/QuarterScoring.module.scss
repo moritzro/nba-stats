@@ -1,0 +1,22 @@
+.quarterScoring {
+  overflow-x: auto;
+  margin: 64px;
+  display: flex;
+  justify-content: end;
+}
+
+.quarterTable {
+  text-transform: uppercase;
+
+  th {
+    padding-right: 24px;
+  }
+
+  tr {
+    td {
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+}
