@@ -8,15 +8,16 @@
 .quarterTable {
   text-transform: uppercase;
 
-  th {
-    padding-right: 24px;
-  }
+}
 
-  tr {
-    td {
-      &:first-child {
-        font-weight: bold;
-      }
+.quarterTableRow {
+  .quarterTableCell {
+    &:first-child {
+      font-weight: bold;
     }
   }
+}
+
+.quarterTableHead {
+  padding-right: 24px;
 }
