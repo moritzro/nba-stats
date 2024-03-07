@@ -13,31 +13,29 @@ const QuarterScoring: FC<QuarterScoringProps> = ({ id }) => {
     <div className={styles.quarterScoring}>
       <table className={styles.quarterTable}>
         <thead>
-          <tr>
-            <th>Teams</th>
-            {match.scores.visitors.linescore.map(
-              (linescore: number, index: number) => (
-                <th key={index}>
-                  {index < 4 ? `Q${index + 1}` : `OT${index - 3}`}
-                </th>
-              )
-            )}
+          <tr className={styles.quarterTableRow}>
+            <th className={styles.quarterTableHead}>Teams</th>
+            {match.scores.visitors.linescore.map((_: any, index: number) => (
+              <th className={styles.quarterTableHead} key={index}>
+                {index < 4 ? `Q${index + 1}` : `OT${index - 3}`}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{match.teams.visitors.code}</td>
+          <tr className={styles.quarterTableRow}>
+            <td className={styles.quarterTableCell}>{match.teams.visitors.code}</td>
             {match.scores.visitors.linescore.map(
               (linescore: number, index: number) => (
-                <td key={index}>{linescore}</td>
+                <td className={styles.quarterTableCell} key={index}>{linescore}</td>
               )
             )}
           </tr>
-          <tr>
-            <td>{match.teams.home.code}</td>
+          <tr className={styles.quarterTableRow}>
+            <td className={styles.quarterTableCell}>{match.teams.home.code}</td>
             {match.scores.home.linescore.map(
               (linescore: number, index: number) => (
-                <td key={index}>{linescore}</td>
+                <td className={styles.quarterTableCell} key={index}>{linescore}</td>
               )
             )}
           </tr>
