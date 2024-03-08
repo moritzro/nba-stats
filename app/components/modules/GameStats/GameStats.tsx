@@ -23,7 +23,12 @@ const GameStats: FC<GameStatsProps> = ({ id }) => {
       {data.response.map((team: any, index: number) => {
         return (
           <div className={styles.statsWrapper} key={index}>
-            <img key={index} className={styles.teamLogo} src={team.team.logo} alt={team.team.name}/>
+            <img
+              key={index}
+              className={styles.teamLogo}
+              src={team.team.logo}
+              alt={team.team.name}
+            />
             {team.statistics.map((stats: any, index: number) => (
               <TeamStatsTable
                 key={index}

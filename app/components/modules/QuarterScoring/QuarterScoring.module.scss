@@ -1,0 +1,51 @@
+.quarterScoring {
+  overflow-x: auto;
+  margin: 32px;
+  display: flex;
+  justify-content: center;
+
+  @include m {
+    margin: 64px;
+    justify-content: flex-end;
+  }
+}
+
+.quarterTable {
+  text-transform: uppercase;
+  border-radius: 12px;
+  padding: 16px;
+  border: 2px solid #e9e9e9;
+  border-spacing: 0;
+  text-align: center;
+  font-size: 1.25rem;
+
+  @include s {
+    font-size: 1.375rem;
+    padding: 24px;
+  }
+}
+
+.quarterTableRow:nth-child(even) {
+  background-color: #fff;
+}
+
+.quarterTableRow {
+  .quarterTableCell {
+    &:first-child {
+      font-weight: bold;
+      border-right: 2px solid #e9e9e9;
+    }
+  }
+}
+
+.quarterTableHead {
+  padding-right: 16px;
+  padding-left: 16px;
+  border-bottom: 2px solid #e9e9e9;
+  padding-bottom: 8px;
+
+  @include s {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
