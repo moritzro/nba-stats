@@ -24,10 +24,14 @@ const QuarterScoring: FC<QuarterScoringProps> = ({ id }) => {
         </thead>
         <tbody>
           <tr className={styles.quarterTableRow}>
-            <td className={styles.quarterTableCell}>{match.teams.visitors.code}</td>
+            <td className={styles.quarterTableCell}>
+              {match.teams.visitors.code}
+            </td>
             {match.scores.visitors.linescore.map(
               (linescore: number, index: number) => (
-                <td className={styles.quarterTableCell} key={index}>{linescore}</td>
+                <td className={styles.quarterTableCell} key={index}>
+                  {linescore}
+                </td>
               )
             )}
           </tr>
@@ -35,7 +39,9 @@ const QuarterScoring: FC<QuarterScoringProps> = ({ id }) => {
             <td className={styles.quarterTableCell}>{match.teams.home.code}</td>
             {match.scores.home.linescore.map(
               (linescore: number, index: number) => (
-                <td className={styles.quarterTableCell} key={index}>{linescore}</td>
+                <td className={styles.quarterTableCell} key={index}>
+                  {linescore}
+                </td>
               )
             )}
           </tr>
