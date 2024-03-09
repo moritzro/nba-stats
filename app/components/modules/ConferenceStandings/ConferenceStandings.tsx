@@ -27,35 +27,45 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
           <tr>
             <th className={styles.th}>Rank</th>
             <th className={styles.th}>Team</th>
+            <th className={styles.th}>W-L</th>
             <th className={styles.th}>Streak</th>
           </tr>
         </thead>
         <tbody>
-          {data.response.map((item: any, index: any) => (
-            <tr key={index}>
-              <td className={styles.rankColumn}>{item.conference.rank}</td>
-              <td className={styles.logoName}>
-                <img
-                  src={item.team.logo}
-                  alt={item.team.name}
-                  className={styles.logo}
-                />
-                <Link href="#" className={styles.name}>
-                  {item.team.name}
-                </Link>
-              </td>
-              <td className={styles.streakColumn}>
-                <div className={styles.flexWrapper}>
-                  {item.streak}
-                  {item.winStreak ? (
-                    <GoArrowUpRight className={styles.up} />
-                  ) : (
-                    <GoArrowDownRight className={styles.down} />
-                  )}
-                </div>
-              </td>
-            </tr>
-          ))}
+          {data?.response
+            .sort((a: any, b: any) => {
+              if (a.conference.rank < b.conference.rank) {
+                return -1;
+              }
+            })
+            .map((item: any, index: any) => (
+              <tr key={index}>
+                <td className={styles.rankColumn}>{item.conference.rank}</td>
+                <td className={styles.logoName}>
+                  <img
+                    src={item.team.logo}
+                    alt={item.team.name}
+                    className={styles.logo}
+                  />
+                  <Link href="#" className={styles.name}>
+                    {item.team.name}
+                  </Link>
+                </td>
+                <td className={styles.winLossColumn}>
+                  {item.win.total} - {item.loss.total}
+                </td>
+                <td className={styles.streakColumn}>
+                  <div className={styles.flexWrapper}>
+                    {item.streak}
+                    {item.winStreak ? (
+                      <GoArrowUpRight className={styles.up} />
+                    ) : (
+                      <GoArrowDownRight className={styles.down} />
+                    )}
+                  </div>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
