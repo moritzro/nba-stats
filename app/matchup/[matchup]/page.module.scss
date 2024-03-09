@@ -1,0 +1,12 @@
+.gameInfoWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 32px;
+
+  @include m {
+    margin: 64px;
+    gap: 64px;
+  }
+}
