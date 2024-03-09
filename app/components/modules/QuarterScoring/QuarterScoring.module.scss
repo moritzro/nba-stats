@@ -1,11 +1,9 @@
 .quarterScoring {
   overflow-x: auto;
-  margin: 32px;
   display: flex;
   justify-content: center;
 
   @include m {
-    margin: 64px;
     justify-content: flex-end;
   }
 }
