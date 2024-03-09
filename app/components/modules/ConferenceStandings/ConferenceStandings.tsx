@@ -31,7 +31,7 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
           </tr>
         </thead>
         <tbody>
-          {data.response.map((item: any, index: any) => (
+          {data?.response.map((item: any, index: any) => (
             <tr key={index}>
               <td className={styles.rankColumn}>{item.conference.rank}</td>
               <td className={styles.logoName}>
