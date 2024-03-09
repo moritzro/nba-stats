@@ -66,31 +66,6 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
                 </td>
               </tr>
             ))}
-          {data?.response.map((item: any, index: any) => (
-            <tr key={index}>
-              <td className={styles.rankColumn}>{item.conference.rank}</td>
-              <td className={styles.logoName}>
-                <img
-                  src={item.team.logo}
-                  alt={item.team.name}
-                  className={styles.logo}
-                />
-                <Link href="#" className={styles.name}>
-                  {item.team.name}
-                </Link>
-              </td>
-              <td className={styles.streakColumn}>
-                <div className={styles.flexWrapper}>
-                  {item.streak}
-                  {item.winStreak ? (
-                    <GoArrowUpRight className={styles.up} />
-                  ) : (
-                    <GoArrowDownRight className={styles.down} />
-                  )}
-                </div>
-              </td>
-            </tr>
-          ))}
         </tbody>
       </table>
     </div>
