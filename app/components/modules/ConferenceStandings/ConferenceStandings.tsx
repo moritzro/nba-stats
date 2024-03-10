@@ -42,13 +42,16 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
               <tr key={index}>
                 <td className={styles.rankColumn}>{item.conference.rank}</td>
                 <td className={styles.logoName}>
-                  <img
-                    src={item.team.logo}
-                    alt={item.team.name}
-                    className={styles.logo}
-                  />
-                  <Link href="#" className={styles.name}>
-                    {item.team.name}
+                  <Link
+                    className={styles.teamLink}
+                    href={`team/${item.team.id}`}
+                  >
+                    <img
+                      src={item.team.logo}
+                      alt={item.team.name}
+                      className={styles.logo}
+                    />
+                    <div className={styles.name}>{item.team.name}</div>
                   </Link>
                 </td>
                 <td className={styles.winLossColumn}>

@@ -2,6 +2,7 @@ import { FC, use } from "react";
 import { getGame } from "@/utils/FetchGame";
 import { getFormattedDate } from "@/utils/GetDate";
 import { MdOutlineStadium, MdOutlinePersonOutline } from "react-icons/md";
+import Link from "next/link";
 import styles from "./MatchDetails.module.scss";
 
 type StageMatchDetailsProps = {
@@ -15,11 +16,13 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
     <div className={styles.stage}>
       <div className={styles.matchup}>
         <div className={styles.team}>
-          <img
-            src={match.teams.visitors.logo}
-            alt={match.teams.visitors.logo}
-            className={styles.logo}
-          />
+          <Link href={`../team/${match.teams.visitors.id}`}>
+            <img
+              src={match.teams.visitors.logo}
+              alt={match.teams.visitors.logo}
+              className={styles.logo}
+            />
+          </Link>
         </div>
         <div className={styles.info}>
           {match.status.long === "live" || match.status.long === "Finished" ? (
@@ -36,11 +39,13 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
           )}
         </div>
         <div className={styles.team}>
-          <img
-            src={match.teams.home.logo}
-            alt={match.teams.home.logo}
-            className={styles.logo}
-          />
+          <Link href={`../team/${match.teams.home.id}`}>
+            <img
+              src={match.teams.home.logo}
+              alt={match.teams.home.logo}
+              className={styles.logo}
+            />
+          </Link>
         </div>
       </div>
       <div className={styles.matchInfo}>
