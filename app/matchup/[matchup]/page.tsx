@@ -11,7 +11,8 @@ const Matchup = ({ params: { matchup } }) => {
       <div className={styles.gameInfoWrapper}>
         <QuarterScoring id={matchup} />
         <GameStats id={matchup} />
-        <GamePlayerStats id={matchup} />
+        <GamePlayerStats id={matchup} team={"home"} />
+        <GamePlayerStats id={matchup} team={"away"} />
       </div>
     </div>
   );
