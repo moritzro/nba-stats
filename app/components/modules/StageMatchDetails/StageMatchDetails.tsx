@@ -3,6 +3,7 @@ import { getGame } from "@/utils/FetchGame";
 import { getFormattedDate } from "@/utils/GetDate";
 import { MdOutlineStadium, MdOutlinePersonOutline } from "react-icons/md";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./MatchDetails.module.scss";
 
 type StageMatchDetailsProps = {
@@ -17,10 +18,12 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
       <div className={styles.matchup}>
         <div className={styles.team}>
           <Link href={`../team/${match.teams.visitors.id}`}>
-            <img
-              src={match.teams.visitors.logo}
-              alt={match.teams.visitors.logo}
+            <Image
+              src={match?.teams?.visitors?.logo}
+              alt={match?.teams?.visitors?.name}
               className={styles.logo}
+              width={100}
+              height={100}
             />
           </Link>
         </div>
@@ -40,10 +43,12 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
         </div>
         <div className={styles.team}>
           <Link href={`../team/${match.teams.home.id}`}>
-            <img
-              src={match.teams.home.logo}
-              alt={match.teams.home.logo}
+            <Image
+              src={match?.teams?.home?.logo}
+              alt={match?.teams?.home?.name}
               className={styles.logo}
+              width={100}
+              height={100}
             />
           </Link>
         </div>

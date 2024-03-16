@@ -1,6 +1,7 @@
 import { FC, use } from "react";
 import { getGameStats } from "@/utils/FetchGameStats";
 import Link from "next/link";
+import Image from "next/image";
 import TeamStatsTable from "../../custom/TeamStatsTable/TeamStatsTable";
 import styles from "./GameStats.module.scss";
 
@@ -25,11 +26,13 @@ const GameStats: FC<GameStatsProps> = ({ id }) => {
         return (
           <div className={styles.statsWrapper} key={index}>
             <Link key={index} href={`../team/${team.team.id}`}>
-              <img
+              <Image
                 key={index}
+                src={team?.team?.logo}
+                alt={team?.team?.name}
                 className={styles.teamLogo}
-                src={team.team.logo}
-                alt={team.team.name}
+                width={100}
+                height={100}
               />
             </Link>
             {team.statistics.map((stats: any, index: number) => (

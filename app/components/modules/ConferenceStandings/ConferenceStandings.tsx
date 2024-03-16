@@ -2,6 +2,7 @@ import { FC, use } from "react";
 import { GET } from "@/utils/Fetch";
 import { GoArrowUpRight, GoArrowDownRight } from "react-icons/go";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./ConferenceStandings.module.scss";
 
 interface ConferenceStandingsProps {
@@ -46,10 +47,12 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
                     className={styles.teamLink}
                     href={`team/${item.team.id}`}
                   >
-                    <img
-                      src={item.team.logo}
-                      alt={item.team.name}
+                    <Image
+                      src={item?.team?.logo}
+                      alt={item?.team?.name}
                       className={styles.logo}
+                      height={100}
+                      width={100}
                     />
                     <div className={styles.name}>{item.team.name}</div>
                   </Link>
