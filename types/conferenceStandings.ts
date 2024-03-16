@@ -1,7 +1,7 @@
 export type ConferenceStandings = {
   league: string;
   season: number;
-  teams: {
+  team: {
     id: number;
     name: string;
     nickname: string;

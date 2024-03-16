@@ -16,7 +16,10 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
     <div className={styles.stage}>
       <div className={styles.matchup}>
         <div className={styles.team}>
-          <Link href={`../team/${match.teams.visitors.id}`}>
+          <Link
+            className={styles.teamLink}
+            href={`../team/${match.teams.visitors.id}`}
+          >
             <p className={styles.name}>{match?.teams?.visitors.name}</p>
             <Image
               src={match?.teams?.visitors.logo}
@@ -43,7 +46,10 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
           )}
         </div>
         <div className={styles.team}>
-          <Link href={`../team/${match.teams.home.id}`}>
+          <Link
+            className={styles.teamLink}
+            href={`../team/${match.teams.home.id}`}
+          >
             <Image
               src={match?.teams?.home.logo}
               alt={match?.teams?.home.logo}
