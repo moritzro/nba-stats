@@ -2,6 +2,7 @@ import { use } from "react";
 import { getNbaGames } from "@/utils/FetchNextGames";
 import { formatDate } from "@/utils/FormatDate";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./RecentGames.module.scss";
 
 const RecentGames = () => {
@@ -19,9 +20,11 @@ const RecentGames = () => {
               href={`matchup/${game.id}`}
             >
               <div className={styles.team}>
-                <img
-                  src={game.teams.home.logo}
-                  alt={game.scores.home.name}
+                <Image
+                  src={game?.teams?.home.logo}
+                  alt={game?.scores?.home.name}
+                  height={100}
+                  width={100}
                   className={styles.image}
                 />
                 <div>{game.scores.home.points}</div>
@@ -29,9 +32,11 @@ const RecentGames = () => {
               <div>:</div>
               <div className={styles.team}>
                 <div> {game.scores.visitors.points}</div>
-                <img
-                  src={game.teams.visitors.logo}
-                  alt={game.scores.visitors.name}
+                <Image
+                  src={game?.teams?.visitors.logo}
+                  alt={game?.scores?.visitors.name}
+                  height={100}
+                  width={100}
                   className={styles.image}
                 />
               </div>
