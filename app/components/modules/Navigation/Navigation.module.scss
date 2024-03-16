@@ -6,11 +6,11 @@
   align-items: center;
   padding: 24px;
   background-color: #e1e1e1;
+  transition: 0.3s ease-in-out;
   z-index: 1;
   bottom: 0;
 
   @include s {
-    background-color: #e1e1e14d;
     padding: 24px 48px;
     top: 0;
     bottom: unset;
@@ -34,10 +34,23 @@
   flex-wrap: wrap;
   list-style-type: none;
   gap: 24px;
+}
 
-  .navListItem {
-    font-weight: 500;
-    font-size: 1.25rem;
+.link {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.25rem;
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
   }
 }
 
