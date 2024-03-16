@@ -1,46 +1,34 @@
 .stage {
   display: flex;
   justify-content: center;
-  background-color: #d6d2d2;
-  padding: 32px;
+  margin-block-start: 96px;
+  padding: 64px;
+  padding-block-start: 96px;
   flex-direction: column;
-
-  @include m {
-    padding: 64px;
-  }
+  background-color: #0f0f0f;
+  color: #fff;
 
   .matchup {
     display: flex;
     align-items: center;
-    gap: 24px;
-    border-bottom: 3px solid black;
-    padding-block-end: 24px;
+    gap: calc(100vw / 20);
     justify-content: center;
-
-    @include s {
-      gap: 64px;
-    }
-
-    @include m {
-      gap: 96px;
-    }
-  }
-
-  .score {
-    font-size: 36px;
-    font-weight: bold;
   }
 
   .logo {
-    height: 80px;
-    width: auto;
+    height: auto;
+    width: calc(100vw / 5);
 
     @include s {
-      height: 150px;
+      width: calc(100vw / 6);
     }
 
     @include m {
-      height: 200px;
+      width: calc(100vw / 10);
+    }
+
+    &:hover {
+      transform: scale(1.04);
     }
   }
 
@@ -64,10 +52,31 @@
 
   .score {
     width: max-content;
-    font-size: 1.5rem;
+    font-size: calc(100vw / 20);
+    font-weight: bold;
+  }
+
+  .date {
+    font-size: calc(100vw / 20);
+    inline-size: max-content;
 
     @include s {
-      font-size: calc(100vw / 26);
+      font-size: calc(100vw / 40);
+    }
+  }
+
+  .teamLink {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .name {
+    display: none;
+
+    @include m {
+      display: block;
+      font-size: calc(100vw / 80);
     }
   }
 }

@@ -1,7 +1,9 @@
 import { FC, use } from "react";
 import { GET } from "@/utils/Fetch";
-import { GoArrowUpRight, GoArrowDownRight } from "react-icons/go";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
+import Image from "next/image";
+import { ConferenceStandings } from "@/types/conferenceStandings";
 import styles from "./ConferenceStandings.module.scss";
 
 interface ConferenceStandingsProps {
@@ -38,13 +40,15 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
                 return -1;
               }
             })
-            .map((item: any, index: any) => (
+            .map((item: ConferenceStandings, index: number) => (
               <tr key={index}>
                 <td className={styles.rankColumn}>{item.conference.rank}</td>
                 <td className={styles.logoName}>
-                  <img
-                    src={item.team.logo}
-                    alt={item.team.name}
+                  <Image
+                    src={item?.team?.logo}
+                    alt={item?.team?.name}
+                    height={100}
+                    width={100}
                     className={styles.logo}
                   />
                   <Link href="#" className={styles.name}>
@@ -58,9 +62,9 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
                   <div className={styles.flexWrapper}>
                     {item.streak}
                     {item.winStreak ? (
-                      <GoArrowUpRight className={styles.up} />
+                      <IoIosArrowUp className={styles.up} />
                     ) : (
-                      <GoArrowDownRight className={styles.down} />
+                      <IoIosArrowDown className={styles.down} />
                     )}
                   </div>
                 </td>

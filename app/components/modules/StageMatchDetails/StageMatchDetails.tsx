@@ -2,6 +2,8 @@ import { FC, use } from "react";
 import { getGame } from "@/utils/FetchGame";
 import { getFormattedDate } from "@/utils/GetDate";
 import { MdOutlineStadium, MdOutlinePersonOutline } from "react-icons/md";
+import Link from "next/link";
+import Image from "next/image";
 import styles from "./MatchDetails.module.scss";
 
 type StageMatchDetailsProps = {
@@ -15,11 +17,17 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
     <div className={styles.stage}>
       <div className={styles.matchup}>
         <div className={styles.team}>
-          <img
-            src={match.teams.visitors.logo}
-            alt={match.teams.visitors.logo}
-            className={styles.logo}
-          />
+          <Link href={"#"} className={styles.teamLink}>
+            <p className={styles.name}>{match?.teams?.visitors.name}</p>
+            <Image
+              src={match?.teams?.visitors.logo}
+              alt={match?.teams?.visitors.logo}
+              height={100}
+              width={100}
+              unoptimized
+              className={styles.logo}
+            />
+          </Link>
         </div>
         <div className={styles.info}>
           {match.status.long === "live" || match.status.long === "Finished" ? (
@@ -36,24 +44,18 @@ const StageMatchDetails: FC<StageMatchDetailsProps> = ({ id }) => {
           )}
         </div>
         <div className={styles.team}>
-          <img
-            src={match.teams.home.logo}
-            alt={match.teams.home.logo}
-            className={styles.logo}
-          />
+          <Link href={"#"} className={styles.teamLink}>
+            <Image
+              src={match?.teams?.home.logo}
+              alt={match?.teams?.home.logo}
+              height={100}
+              width={100}
+              unoptimized
+              className={styles.logo}
+            />
+            <p className={styles.name}>{match?.teams?.home.name}</p>
+          </Link>
         </div>
-      </div>
-      <div className={styles.matchInfo}>
-        <div className={styles.info}>
-          <MdOutlineStadium />
-          <p>{match.arena.name}</p>
-        </div>
-        {match.officials.map((official: string, index: number) => (
-          <div className={styles.info} key={index}>
-            <MdOutlinePersonOutline />
-            <p>{official}</p>
-          </div>
-        ))}
       </div>
     </div>
   );
