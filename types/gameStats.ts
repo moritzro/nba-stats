@@ -28,13 +28,11 @@ export type Statistic = {
 };
 
 export type GameStatsTeam = {
-  team: {
-    id: number;
-    name: string;
-    nickname: string;
-    code: string;
-    logo: string;
-  };
+  id: number;
+  name: string;
+  nickname: string;
+  code: string;
+  logo: string;
 };
 
 export type GameStats = {
