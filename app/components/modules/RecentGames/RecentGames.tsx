@@ -3,17 +3,18 @@ import { getNbaGames } from "@/utils/FetchNextGames";
 import { formatDate } from "@/utils/FormatDate";
 import Link from "next/link";
 import Image from "next/image";
+import Game from "@/types/game";
 import styles from "./RecentGames.module.scss";
 
 const RecentGames = () => {
-  const currentDate: any = formatDate(new Date());
+  const currentDate: Date = formatDate(new Date());
   const data = use(getNbaGames(currentDate, "2023"));
 
   return (
     <div>
       <div className={styles.matchesWrapper}>
         {data.results > 0 ? (
-          data.response.map((game: any, index: number) => (
+          data.response.map((game: Game, index: number) => (
             <Link
               key={index}
               className={styles.game}

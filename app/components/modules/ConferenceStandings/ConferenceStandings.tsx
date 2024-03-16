@@ -3,6 +3,7 @@ import { GET } from "@/utils/Fetch";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
+import { ConferenceStandings } from "@/types/conferenceStandings";
 import styles from "./ConferenceStandings.module.scss";
 
 interface ConferenceStandingsProps {
@@ -39,7 +40,7 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
                 return -1;
               }
             })
-            .map((item: any, index: any) => (
+            .map((item: ConferenceStandings, index: number) => (
               <tr key={index}>
                 <td className={styles.rankColumn}>{item.conference.rank}</td>
                 <td className={styles.logoName}>
