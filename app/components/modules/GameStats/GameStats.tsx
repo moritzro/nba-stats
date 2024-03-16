@@ -3,6 +3,7 @@ import { getGameStats } from "@/utils/FetchGameStats";
 import Link from "next/link";
 import Image from "next/image";
 import TeamStatsTable from "../../custom/TeamStatsTable/TeamStatsTable";
+import { Statistic, GameStats } from "@/types/gameStats";
 import styles from "./GameStats.module.scss";
 
 type GameStatsProps = {
@@ -22,7 +23,7 @@ const GameStats: FC<GameStatsProps> = ({ id }) => {
         <div>Turnovers</div>
         <div>FG%</div>
       </div>
-      {data.response.map((team: any, index: number) => {
+      {data.response.map((team: GameStats, index: number) => {
         return (
           <div className={styles.statsWrapper} key={index}>
             <Link key={index} href={`../team/${team.team.id}`}>
