@@ -11,7 +11,7 @@ const GamePlayerStats: FC<GameStatsPlayersProps> = ({ id, team }) => {
   const data = use(getGameStatsPlayers(id));
   const homeTeam: any = [];
   const awayTeam: any = [];
-  const teamId = data.response[0].team.id;
+  const teamId = data.response[0]?.team.id;
 
   data.response.map((item: any, index: number) => {
     if (item.team.id === teamId) {
