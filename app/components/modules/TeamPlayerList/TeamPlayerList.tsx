@@ -15,9 +15,11 @@ const TeamPlayerList: FC<TeamPlayerListProps> = ({ id }) => {
       <h2 className={styles.tableHeadline}>Roster</h2>
       <table className={styles.playerTable}>
         <thead>
-          <th>No</th>
-          <th>Name</th>
-          <th>Pos</th>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Pos</th>
+          </tr>
         </thead>
         <tbody>
           {data.response.map((player: any, index: number) => (
