@@ -1,6 +1,6 @@
 import { FC, use } from "react";
 import { getTeamPlayers } from "@/utils/FetchTeamPlayers";
-import Link from "next/link";
+import PlayerCard from "../../custom/PlayerCard/PlayerCard";
 import styles from "./TeamPlayerList.module.scss";
 
 type TeamPlayerListProps = {
@@ -11,37 +11,20 @@ const TeamPlayerList: FC<TeamPlayerListProps> = ({ id }) => {
   const data = use(getTeamPlayers(id));
 
   return (
-    <div className={styles.tableWrapper}>
-      <h2 className={styles.tableHeadline}>Roster</h2>
-      <table className={styles.playerTable}>
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Pos</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.response.map((player: any, index: number) => (
-            <tr key={index}>
-              <td className={styles.playerTableCell}>
-                {player.leagues.standard.jersey !== null
-                  ? player.leagues.standard.jersey
-                  : "00"}
-              </td>
-              <td className={styles.playerTableCell}>
-                <Link href="#">
-                  {player.firstname} {player.lastname}
-                </Link>
-              </td>
-              <td className={styles.playerTableCell}>
-                {player.leagues.standard.pos}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <>
+      <PlayerCard
+        playerImg={
+          "https://a.espncdn.com/combiner/i?img=/i/headshots/nophoto.png&w=200&h=146"
+        }
+        playerFirstName={"LeBron"}
+        playerLastName={"James"}
+        jerseyNumber={23}
+        position={"SF"}
+        college={"No College"}
+        country={"US"}
+        height={"6 Foot 9 Inches"}
+      />
+    </>
   );
 };
 
