@@ -32,16 +32,17 @@ const PlayerCard: FC<PlayerCardProps> = ({
           alt={`${playerFirstName} ${playerLastName}`}
           className={styles.playerImg}
         />
-      </button>
-      <div>
-        <div>
-          <p>{jerseyNumber}</p>
-          <p>{position}</p>
+        <div className={styles.playerInfo}>
+          <div>
+            <p className={styles.jerseyNumberSmall}>{jerseyNumber}</p>
+            <p className={styles.position}>{position}</p>
+          </div>
+          <p className={styles.playerName}>
+            <span className={styles.firstName}>{playerFirstName}</span>
+            <span className={styles.lastName}>{playerLastName}</span>
+          </p>
         </div>
-        <p>
-          {playerFirstName} {playerLastName}
-        </p>
-      </div>
+      </button>
       <div className={styles.playerCardBack}>
         <p>{college}</p>
         <p>{country}</p>
