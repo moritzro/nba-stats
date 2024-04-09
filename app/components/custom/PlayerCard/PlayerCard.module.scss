@@ -1,0 +1,63 @@
+.playerCardContainer {
+  height: 560px;
+  position: relative;
+}
+
+.playerCardFront {
+  position: relative;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.playerImg {
+  position: relative;
+  height: 100%;
+  max-height: 280px;
+  z-index: 1;
+}
+
+.jerseyNumber {
+  font-size: 10rem;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.playerCardBack {
+  display: none;
+}
+
+.playerInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  border-top: 2px solid;
+}
+
+.jerseyNumberSmall {
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.position {
+  font-size: 0.75rem;
+}
+
+.playerName {
+  font-size: 1.5rem;
+}
+
+.lastName,
+.firstName {
+  display: block;
+}
+
+.lastName {
+  margin-top: 5px;
+  font-weight: 600;
+}
