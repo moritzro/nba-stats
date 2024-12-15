@@ -1,6 +1,6 @@
 export async function getNbaGames(date: string, season: string): Promise<any> {
   const response = await fetch(
-    `https://api-nba-v1.p.rapidapi.com/games?date=${date}&season=${season}`,
+    `https://api-nba-v1.p.rapidapi.com/games?date=${date}`,
     {
       method: "GET",
       headers: {

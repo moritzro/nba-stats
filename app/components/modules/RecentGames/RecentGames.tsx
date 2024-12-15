@@ -8,7 +8,7 @@ import styles from "./RecentGames.module.scss";
 
 const RecentGames = () => {
   const currentDate: Date = formatDate(new Date());
-  const data = use(getNbaGames(currentDate, "2023"));
+  const data = use(getNbaGames(currentDate, "2024"));
 
   return (
     <div>

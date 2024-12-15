@@ -17,7 +17,7 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
 }) => {
   const data = use(
     GET(
-      `https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2023&conference=${conference}`
+      `https://api-nba-v1.p.rapidapi.com/standings?league=standard&season=2024&conference=${conference}`
     )
   );
 
