@@ -1,6 +1,6 @@
 export async function getTeamPlayers(id: number): Promise<any> {
   const response = await fetch(
-    `https://api-nba-v1.p.rapidapi.com/players?team=${id}&season=2023`,
+    `https://api-nba-v1.p.rapidapi.com/players/statistics?team=${id}&season=${process.env.season}`,
     {
       method: "GET",
       headers: {
