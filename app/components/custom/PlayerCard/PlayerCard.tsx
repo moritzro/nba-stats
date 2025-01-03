@@ -8,6 +8,8 @@ type PlayerCardProps = {
   playerLastName: string;
   jerseyNumber: number;
   position: string;
+  teamLogo: string;
+  teamName: string;
 };
 
 const PlayerCard: FC<PlayerCardProps> = ({
@@ -16,6 +18,8 @@ const PlayerCard: FC<PlayerCardProps> = ({
   playerLastName,
   jerseyNumber,
   position,
+  teamLogo,
+  teamName,
 }) => {
   return (
     <div className={styles.playerCardContainer}>
@@ -35,6 +39,11 @@ const PlayerCard: FC<PlayerCardProps> = ({
             <span className={styles.firstName}>{playerFirstName}</span>
             <span className={styles.lastName}>{playerLastName}</span>
           </p>
+          <img
+            src={teamLogo}
+            alt={teamName}
+            className={styles.teamLogoPlayer}
+          />
         </div>
       </button>
       <div className={styles.playerCardBack}>
