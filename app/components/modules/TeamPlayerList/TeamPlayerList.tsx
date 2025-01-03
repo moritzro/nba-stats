@@ -11,9 +11,18 @@ type TeamPlayerListProps = {
 const TeamPlayerList: FC<TeamPlayerListProps> = ({ id }) => {
   const data = use(getTeamPlayers(id));
 
+  const seenIds = new Set();
+  const uniquePlayers = data?.response.filter(item => {
+    if (seenIds.has(item.player.id)) {
+      return false; // Skip duplicate player
+    }
+    seenIds.add(item.player.id);
+    return true; // Include unique player
+  });
+  
   return (
-    <>
-    {data?.response.map((item: TeamPlayerList, index: number) => (
+    <div className={styles.playerContainer}>
+    {uniquePlayers.map((item: TeamPlayerList, index: number) => (
       <PlayerCard
         key={index}
         playerImg={
@@ -25,7 +34,7 @@ const TeamPlayerList: FC<TeamPlayerListProps> = ({ id }) => {
         position={item.pos}
       />
     ))}
-    </>
+    </div>
   );
 };
 

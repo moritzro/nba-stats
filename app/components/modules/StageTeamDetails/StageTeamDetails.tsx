@@ -11,7 +11,7 @@ const StageTeamDetails: FC<StageTeamDetailsProps> = ({ id }) => {
   const dataTeam = use(getTeam(id));
   const team = dataTeam.response[0];
   const dataTeamStanding = use(getTeamStanding(id));
-  const teamStanding = dataTeamStanding.response[0];
+  const teamStanding = dataTeamStanding?.response[0];
   return (
     <div className={styles.stage}>
       <img className={styles.teamLogo} src={team.logo} alt={team.name} />
