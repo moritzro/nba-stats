@@ -12,7 +12,7 @@ const TeamPlayerList: FC<TeamPlayerListProps> = ({ id }) => {
   const data = use(getTeamPlayers(id));
 
   const seenIds = new Set();
-  const uniquePlayers = data?.response.filter(item => {
+  const uniquePlayers = data?.response.filter((item: any) => {
     if (seenIds.has(item.player.id)) {
       return false; // Skip duplicate player
     }
@@ -32,6 +32,8 @@ const TeamPlayerList: FC<TeamPlayerListProps> = ({ id }) => {
         playerLastName={item.player.lastname}
         jerseyNumber={23}
         position={item.pos}
+        teamLogo={item.team.logo}
+        teamName={item.team.name}
       />
     ))}
     </div>
