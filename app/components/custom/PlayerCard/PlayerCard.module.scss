@@ -1,6 +1,10 @@
 .playerCardContainer {
-  height: 560px;
+  height: 460px;
   position: relative;
+}
+
+.playerCardContainer:hover .playerCardInner {
+  transform: rotateY(180deg);
 }
 
 .playerCardFront {
@@ -27,8 +31,37 @@
   z-index: 0;
 }
 
+.playerCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
 .playerCardBack {
-  display: none;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: #d6d2d2;
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+.playerCardBack p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.playerCardContainer:hover .playerCardBack {
+  opacity: 1;
 }
 
 .playerInfo {
