@@ -18,6 +18,7 @@ export type TeamPlayerList = {
   totReb: number;
   assists: number;
   turnovers: number;
+  steals: number;
   blocks: number;
   plusMinus: string;
 };
