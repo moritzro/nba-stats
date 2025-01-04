@@ -30,10 +30,15 @@ const TeamPlayerList: FC<TeamPlayerListProps> = ({ id }) => {
         }
         playerFirstName={item.player.firstname}
         playerLastName={item.player.lastname}
-        jerseyNumber={23}
+        jerseyNumber={Math.round(Math.random() * (99 - 0))} // Random Number since API doesn't provide Jersey Number
         position={item.pos}
         teamLogo={item.team.logo}
         teamName={item.team.name}
+        playerPoints={item.points}
+        playerAssists={item.assists}
+        playerBlocks={item.blocks}
+        playerSteals={item.steals}
+        playerTotReb={item.totReb}
       />
     ))}
     </div>
