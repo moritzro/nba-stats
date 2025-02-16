@@ -1,5 +1,6 @@
 import { FC, use } from "react";
 import { getTeamUpcomingGames } from "@/utils/FetchTeamUpcomingGames";
+import { formatDate } from "@/utils/FormatDate";
 import GameCard from "../../custom/GameCard/GameCard";
 import styles from "./UpcomingGames.module.scss";
 
@@ -33,11 +34,10 @@ const TeamUpcomingGames: FC<TeamUpcomingGamesProps> = ({ id }) => {
           gameStatus={game.status.long}
           gameTime={game.scores.home.points}
           gamePeriod={game.periods.current}
-          gameDate={game.date.start}
+          gameDate={formatDate(game.date.start)}
           gameId={game.id}
         />
       ))}
-      <div className={styles.scheduledGame}></div>
     </div>
   );
 };
