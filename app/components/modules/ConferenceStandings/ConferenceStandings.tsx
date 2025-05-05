@@ -1,9 +1,9 @@
 import { FC, use } from "react";
 import { GET } from "@/utils/Fetch";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import type { ConferenceStandings } from "@/types/conferenceStandings";
 import Link from "next/link";
 import Image from "next/image";
-import { ConferenceStandings } from "@/types/conferenceStandings";
 import styles from "./ConferenceStandings.module.scss";
 
 interface ConferenceStandingsProps {
@@ -36,9 +36,7 @@ const ConferenceStandings: FC<ConferenceStandingsProps> = ({
         <tbody>
           {data?.response
             .sort((a: any, b: any) => {
-              if (a.conference.rank < b.conference.rank) {
-                return -1;
-              }
+              return a.conference.rank - b.conference.rank;
             })
             .map((item: ConferenceStandings, index: number) => (
               <tr key={index}>

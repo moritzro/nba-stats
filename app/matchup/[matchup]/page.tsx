@@ -4,7 +4,13 @@ import QuarterScoring from "@/app/components/modules/QuarterScoring/QuarterScori
 import GamePlayerStats from "@/app/components/modules/GamePlayerStats/GamePlayerStats";
 import styles from "./page.module.scss";
 
-const Matchup = ({ params: { matchup } }) => {
+type MatchupParams = {
+  params: {
+    matchup: number;
+  };
+};
+
+const Matchup = ({ params: { matchup } }: MatchupParams) => {
   return (
     <div>
       <StageMatchDetails id={matchup} />

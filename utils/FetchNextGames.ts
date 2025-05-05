@@ -1,4 +1,4 @@
-export async function getNbaGames(date: string, season: string): Promise<any> {
+export async function getNbaGames(date: string, season: any): Promise<any> {
   const response = await fetch(
     `https://api-nba-v1.p.rapidapi.com/games?date=${date}`,
     {

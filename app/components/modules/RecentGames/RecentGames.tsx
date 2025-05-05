@@ -1,13 +1,13 @@
 import { use } from "react";
 import { getNbaGames } from "@/utils/FetchNextGames";
 import { formatDate } from "@/utils/FormatDate";
+import { Game } from "@/types/game";
 import Link from "next/link";
 import Image from "next/image";
-import Game from "@/types/game";
 import styles from "./RecentGames.module.scss";
 
 const RecentGames = () => {
-  const currentDate: Date = formatDate(new Date());
+  const currentDate: string = formatDate(new Date());
   const data = use(getNbaGames(currentDate, process.env.season));
 
   return (
@@ -23,7 +23,7 @@ const RecentGames = () => {
               <div className={styles.team}>
                 <Image
                   src={game?.teams?.home.logo}
-                  alt={game?.scores?.home.name}
+                  alt={game?.teams?.home.name}
                   height={100}
                   width={100}
                   className={styles.image}
@@ -35,7 +35,7 @@ const RecentGames = () => {
                 <div> {game.scores.visitors.points}</div>
                 <Image
                   src={game?.teams?.visitors.logo}
-                  alt={game?.scores?.visitors.name}
+                  alt={game?.teams?.visitors.name}
                   height={100}
                   width={100}
                   className={styles.image}
