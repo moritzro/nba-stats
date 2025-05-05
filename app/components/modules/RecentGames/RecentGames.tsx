@@ -1,9 +1,9 @@
 import { use } from "react";
 import { getNbaGames } from "@/utils/FetchNextGames";
 import { formatDate } from "@/utils/FormatDate";
+import { Game } from "@/types/game";
 import Link from "next/link";
 import Image from "next/image";
-import Game from "@/types/game";
 import styles from "./RecentGames.module.scss";
 
 const RecentGames = () => {
