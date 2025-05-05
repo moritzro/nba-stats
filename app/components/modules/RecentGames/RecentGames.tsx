@@ -23,7 +23,7 @@ const RecentGames = () => {
               <div className={styles.team}>
                 <Image
                   src={game?.teams?.home.logo}
-                  alt={game?.scores?.home.name}
+                  alt={game?.teams?.home.name}
                   height={100}
                   width={100}
                   className={styles.image}
@@ -35,7 +35,7 @@ const RecentGames = () => {
                 <div> {game.scores.visitors.points}</div>
                 <Image
                   src={game?.teams?.visitors.logo}
-                  alt={game?.scores?.visitors.name}
+                  alt={game?.teams?.visitors.name}
                   height={100}
                   width={100}
                   className={styles.image}
