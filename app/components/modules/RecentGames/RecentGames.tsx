@@ -7,7 +7,7 @@ import Image from "next/image";
 import styles from "./RecentGames.module.scss";
 
 const RecentGames = () => {
-  const currentDate: Date = formatDate(new Date());
+  const currentDate: string = formatDate(new Date());
   const data = use(getNbaGames(currentDate, process.env.season));
 
   return (
