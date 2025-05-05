@@ -1,6 +1,12 @@
 import StageTeamDetails from "@/app/components/modules/StageTeamDetails/StageTeamDetails";
 
-const Team = ({ params: { team } }) => {
+type TeamParams = {
+  params: {
+    team: number;
+  };
+};
+
+const Team = ({ params: { team } }: TeamParams) => {
   return <StageTeamDetails id={team} />;
 };
 
