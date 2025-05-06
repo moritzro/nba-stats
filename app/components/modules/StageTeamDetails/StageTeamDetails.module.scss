@@ -13,8 +13,9 @@
 }
 
 .teamLogo {
-  height: 200px;
-  width: fit-content;
+  height: 200px !important;
+  width: fit-content !important;
+  position: relative !important;
   padding-bottom: 24px;
 }
 

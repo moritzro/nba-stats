@@ -11,6 +11,11 @@ const nextConfig = {
         hostname: "upload.wikimedia.org",
         pathname: "/wikipedia/**/**",
       },
+      {
+        protocol: "https",
+        hostname: "a.espncdn.com",
+        pathname: "/**",
+      },
     ],
   },
 };
