@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./GameCard.module.scss";
 
@@ -48,10 +49,12 @@ const GameCard: FC<GameCardProps> = ({
           <p className={styles.gameStatus}>{gameStatus}</p>
         </div>
         <div className={styles.gameInfo}>
-          <img
+          <Image
             src={awayTeamLogo}
             className={styles.teamLogo}
             alt={awayTeamName}
+            height={100}
+            width={100}
           />
           <div className={styles.gameStats}>
             {gameStatus === "Scheduled" && (
@@ -78,10 +81,12 @@ const GameCard: FC<GameCardProps> = ({
               </>
             )}
           </div>
-          <img
+          <Image
             src={homeTeamLogo}
             className={styles.teamLogo}
             alt={homeTeamName}
+            height={100}
+            width={100}
           />
         </div>
       </div>

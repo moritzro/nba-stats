@@ -1,6 +1,7 @@
 import { FC, use } from "react";
 import { getTeam } from "@/utils/FetchTeam";
 import { getTeamStanding } from "@/utils/FetchTeamStanding";
+import Image from "next/image";
 import styles from "./StageTeamDetails.module.scss";
 
 type StageTeamDetailsProps = {
@@ -14,7 +15,7 @@ const StageTeamDetails: FC<StageTeamDetailsProps> = ({ id }) => {
   const teamStanding = dataTeamStanding.response[0];
   return (
     <div className={styles.stage}>
-      <img className={styles.teamLogo} src={team.logo} alt={team.name} />
+      <Image className={styles.teamLogo} src={team.logo} alt={team.name} fill />
       <div className={styles.teamInfoWrapper}>
         <p className={styles.teamInfo}>
           <strong>Rank</strong>
